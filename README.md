@@ -1,2 +1,4 @@
-[ ] test
-[ ] prop types
+## TODO
+  - [ ] Agregar propTypes
+  - [ ] Agregar test
+
