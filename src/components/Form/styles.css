@@ -1,0 +1,41 @@
+.creator__form,
+.creator__result {
+  flex: 1 1 50%;
+}
+
+.creator__form {
+  padding: 25px 10px;
+  background: var(--bg-form);
+  color: var(--color);
+  min-height: calc(100vh - 20px);
+}
+
+.form__input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  outline: none;
+  border: 2px solid var(--border-input-color);
+  border-radius: 0 !important;
+  background-color: transparent;
+  color: var(--color);
+}
+
+.form__input:focus {
+  border-color: var(--border-input-color--focus);
+}
+
+.form__input--btn {
+  background-color: var(--color);
+  color: var(--bg-form);
+  padding: 15px;
+  letter-spacing: 2px;
+  border-radius: 0 !important;
+  border: none;
+}
+
+.form__input--file {
+  padding: 8px;
+  background-color: transparent !important;
+  color: rgb(110, 110, 110) !important;
+}

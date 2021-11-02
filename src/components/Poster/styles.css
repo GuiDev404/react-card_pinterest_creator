@@ -1,0 +1,26 @@
+.card_container {
+  width: 450px;
+  padding: 22px;
+  background-color: var(--bg-poster);
+  color: var(--color-poster);
+  font-family: 'Oswald', sans-serif;
+}
+
+.card__img {
+  width: 100%;
+  max-height: auto;
+}
+
+.card-content__title {
+  margin: 10px 0 0 0;
+  overflow-wrap: break-word;
+  font-size: 36px;
+}
+
+.card-content__text {
+  line-height: 25px;
+}
+
+.card-content__text__starring {
+  margin: 30px 0 60px 0;
+}

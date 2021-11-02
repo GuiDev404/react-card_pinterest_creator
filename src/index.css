@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bg-poster: #e9e9e9;
+  --color-poster: #242424;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html[theme=dark-theme] {
+  --bg-main: #2e3033 !important;
+  --color: #fff !important;
+  --bg-form: #232425 !important;
+  --border-input-color: #adadad !important;
+  --border-input-color-focus: #ffffff !important;
+}
+
+html[theme=light-theme] {
+  --bg-main: #d4d4d4 !important;
+  --color: #1d2022 !important;
+  --bg-form: #ffffff !important;
+  --border-input-color: #e6e6e6;
+  --border-input-color-focus: #1a1a1a;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('./assets/oswald_lighter_200.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/oswald_normal_400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/oswald_bold_500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main) !important;
+  max-width: 100vw; 
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: .7px;
+}
+
+.text--uppercase {  text-transform: uppercase; }
+.ls--none { list-style: none; } 
+.fw-light { font-weight: 100; }
+.cursor--pointer { cursor: pointer; }
+.d--none { display: none !important; }
+
+.ml--zero { margin-left: 0; }
+.mt--md { margin-top: 25px; }
+.ml--sm { margin-left: 10px;}
+.mb--sm { margin-bottom: 10px;}
+
+.flex { display: flex;}
+.flex-wrap { flex-wrap: wrap; }
+.flex-column { flex-direction: column; }
+.flex-center { justify-content: center; align-items: center; }
+.calc-width { flex-grow: 1; }
+.flex-vertical-center { align-items: center; }
+.flex-space-between { justify-content: space-between; }
+
+.toggle-theme {
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border: none;
+  border-radius: 0;
+}
+
+.hidden-checkbox {
+  /* visibility: hidden !important; */
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .creator__form {
+    margin: 25px 0;
+  }
+
+  .card_container {
+    width: 425px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .creator__form,
+  .creator__result {
+    flex: 1 1 100%;
+  }
+
+  .card_container {
+    width: 450px;
+  }
+
+  .calc-width { flex: 1 1 100%; }
+  .flex-column-768 { flex-direction: column;  }
+  .form__input {  width: 95%; }
+}
+
+@media screen and (max-width: 580px) {
+  .card_container {
+    width: 100% !important;
+  }
 }

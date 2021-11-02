@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(2px);
+  color: var(--color);
+}
+
+.modal__choose {
+  background: var(--bg-form);
+  padding: 25px;
+  width: calc(30vw + 200px);
+  min-height: 30%;
+}
+
+.input-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.type_label {
+  font-size: 18px !important;
+}
+
+.input-checkbox:checked + .type_label {
+  font-weight: bolder;
+}
+
+.close_btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: var(--color);
+  border-radius: 0;
+}
+
